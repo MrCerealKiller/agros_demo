@@ -1,0 +1,3 @@
+[submodule "catkin_ws/src/agros_gui"]
+	path = catkin_ws/src/agros_gui
+	url = git@github.com:MrCerealKiller/agros_gui.git
