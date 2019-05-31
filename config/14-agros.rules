@@ -1,0 +1,1 @@
+KERNEL=="ttyACM*", ATTRS{idProduct}=="01a9", ATTRS{idVendor}=="1546", SYMLINK+="gps", MODE:="0666"
