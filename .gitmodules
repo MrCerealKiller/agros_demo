@@ -4,3 +4,9 @@
 [submodule "catkin_ws/src/ros_f9p_driver"]
 	path = catkin_ws/src/ros_f9p_driver
 	url = git@github.com:MrCerealKiller/ros_f9p_driver.git
+[submodule "catkin_ws/src/realsense-ros"]
+	path = catkin_ws/src/realsense-ros
+	url = git@github.com:IntelRealSense/realsense-ros.git
+[submodule "catkin_ws/src/ddynamic_reconfigure"]
+	path = catkin_ws/src/ddynamic_reconfigure
+	url = git@github.com:pal-robotics/ddynamic_reconfigure.git
