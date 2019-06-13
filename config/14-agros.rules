@@ -1,1 +1,3 @@
 KERNEL=="ttyACM*", ATTRS{idProduct}=="01a9", ATTRS{idVendor}=="1546", SYMLINK+="gps", MODE:="0666"
+KERNEL=="ttyACM*", ATTRS{idProduct}=="1010", ATTRS{idVendor}=="2476", SYMLINK+="ahrs", MODE:="0666"
+
