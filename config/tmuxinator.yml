@@ -1,0 +1,20 @@
+name: AGROS
+root: <%= ENV["AGROS_DIR"] %>
+
+# Make sure every window has sourced the AgROS setup.zsh
+pre_window: 'source ${AGROS_DIR}/catkin_ws/devel/setup.zsh'
+
+windows:
+  - core: roscore
+  - localization:
+      panes:
+          - roslaunch ros_f9p_driver gps.launch --wait
+          - roslaunch y3space_driver driver.launch --wait
+  - cameras:
+      panes:
+          - roslaunch agros_base camera.launch --wait
+  - gui:
+      panes:
+          - cd catkin_ws/src/agros_gui/angular && ng serve
+          - roslaunch agros_gui gui.launch --wait
+  - test:

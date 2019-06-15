@@ -1,0 +1,9 @@
+#################
+## AgROS Shell ##
+#################
+
+## Adds a shell variable storing the AgROS working directory path
+AGROS_DIR="$( dirname "${(%):-%x}" )"
+
+## Quick alias to source the ROS setup.zsh of the AgROS project
+alias agrosource="source ${AGROS_DIR}/catkin_ws/devel/setup.zsh"

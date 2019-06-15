@@ -44,6 +44,19 @@ else
   echo
 fi
 
+# Tmuxinator Project ----------------------------------------------------------
+echo "${SEC}Symlinking the tmuxinator project to user configuration...${RES}"
+if [[ ! -f "${HOME}/.tmuxinator/agros.yaml" ]]; then
+  echo "Linking..."
+  TMUXINATOR=${DIR}/config/tmuxinator.yml
+  sudo ln -sf ${TMUXINATOR} ${HOME}/.tmuxinator/agros.yml
+  echo "Done"
+  echo
+else
+  echo "File already exists. Skipping..."
+  echo
+fi
+
 # UCenter ---------------------------------------------------------------------
 echo "${SEC}Getting the uCenter installer...${RES}"
 echo "${WARN}Note: the isntaller requires Wine and must be installed${RES}"
@@ -75,10 +88,15 @@ if [[ -x  "$(command -v wine)" ]]; then
   # Loop over input until nothing or a valid number is received
   while true; do
     echo -n "What COM port would you like linked to the /dev/gps?"
-    read -r -p " (default: 99) " port
+    read -r -p " (default: 99; 's' to skip) " port
     if [[ ${port} =~ ^[0-9]+$ ]]; then
       echo "Linking to com${port}..."
       ln -s /dev/gps ~/.wine/dosdevices/com${port}
+      echo "Done"
+      echo
+      break
+    elif [[ $port == "s" ]]; then
+      echo "Skipping..."
       echo "Done"
       echo
       break
@@ -99,6 +117,30 @@ else
   echo "Skipping..."
   echo
 fi
+
+# Add Agros Path to zshrc as AGROS_DIR ----------------------------------------
+# Loop over input until nothing or a valid number is received
+while true; do
+  echo "Add agrosrc as another source in your zshrc?"
+  echo "It is recommended for things like the tmuxinator project to work"
+  echo -n "but you can configure it yourself, manually."
+  read -r -p " (yN) " addPath
+  if [[ ${addPath} == "y" ]]; then
+    echo "Appending source command to your zshrc..."
+      echo "# Link source to agros shell utils" >> ${HOME}/.zshrc
+      echo "source ${DIR}/agrosrc" >> ${HOME}/.zshrc
+      echo "Done"
+      echo
+      break
+    elif [[ $addPath == "n" || $addPath == "N"  || $addPath == "" ]]; then
+      echo "Skipping..."
+      echo "Done"
+      echo
+      break
+    else
+      echo "${ERR}Invalid input. Please try again.${RES}"
+    fi
+  done
 
 # Misc Configs ----------------------------------------------------------------
 echo "${SEC}Adding user to dialout groups...${RES}"
