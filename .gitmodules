@@ -11,9 +11,6 @@
 [submodule "catkin_ws/src/ddynamic_reconfigure"]
 	path = catkin_ws/src/ddynamic_reconfigure
 	url = git@github.com:pal-robotics/ddynamic_reconfigure.git
-[submodule "catkin_ws/src/ros_yost_ahrs"]
-	path = catkin_ws/src/ros_yost_ahrs
-	url = git@github.com:MrCerealKiller/ros_yost_ahrs.git
 [submodule "catkin_ws/src/serial"]
 	path = catkin_ws/src/serial
 	url = git@github.com:wjwwood/serial.git
