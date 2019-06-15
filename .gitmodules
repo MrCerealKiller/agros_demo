@@ -14,3 +14,6 @@
 [submodule "catkin_ws/src/serial"]
 	path = catkin_ws/src/serial
 	url = git@github.com:wjwwood/serial.git
+[submodule "catkin_ws/src/ros_y3space_driver"]
+	path = catkin_ws/src/ros_y3space_driver
+	url = git@github.com:MrCerealKiller/ros_y3space_driver.git
