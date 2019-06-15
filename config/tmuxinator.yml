@@ -15,6 +15,6 @@ windows:
           - roslaunch agros_base camera.launch --wait
   - gui:
       panes:
-          - cd catkin_ws/src/agros_gui/angular && ng serve
+          - cd ${AGROS_DIR}/catkin_ws/src/agros_gui/angular && ng serve
           - roslaunch agros_gui gui.launch --wait
   - test:
