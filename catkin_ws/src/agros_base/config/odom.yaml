@@ -1,0 +1,11 @@
+frame_id: "camera_link"
+odom_frame_id: "odom"
+ground_truth_frame_id: ""
+ground_truth_base_frame_id: ""
+wait_for_transform_duration: 0.3
+approx_sync: false
+queue_size: 10
+subscribe_rgbd: false
+guess_frame_id: ""
+guess_min_translation: 0
+guess_min_rotation: 0
