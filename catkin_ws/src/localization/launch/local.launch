@@ -1,0 +1,12 @@
+    <!-- Publish static transform from NED to ENU -->
+    <node pkg="tf"
+    	  type="static_transform_publisher"
+    	  name="NED_to_ENU"
+    	  args="0 0 0.098 0 0 0  /base_footprint /base_link  100" />
+
+    <!-- Odom-IMU Extended Kalman Filter-->
+    <node pkg="robot_localization"
+    	  type="ekf_localization_node"
+    	  name="ekf_localization_odom"> 
+        <rosparam command="load" file="$(find localization/config/local.yaml" />
+    </node>

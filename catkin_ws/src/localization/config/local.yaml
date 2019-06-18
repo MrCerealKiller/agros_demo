@@ -1,0 +1,31 @@
+frequency: 10
+two_d_mode: false
+
+map_frame: map
+odom_frame: odom
+base_link_frame: base_link
+world_frame: map
+
+# transform_time_offset: 0.1
+
+smooth_lagged_data: true
+dynamic_process_noise_covariance: false
+
+odom0: /visual_odometry/velocity
+odom0_config: [false, false, false,
+               false, false, false,
+               true, true, false,
+               false, false, true,
+               false, false, false]
+               
+odom0_differential: true
+
+imu0: /imu/corrected
+imu0_config: [false, false, false,
+              true, true, true,
+              false, false, false,
+              true, true, true,
+              true, false, false]
+
+imu0_differential: false
+imu0_relative: false
