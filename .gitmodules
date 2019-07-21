@@ -17,3 +17,6 @@
 [submodule "catkin_ws/src/ros_y3space_driver"]
 	path = catkin_ws/src/ros_y3space_driver
 	url = git@github.com:MrCerealKiller/ros_y3space_driver.git
+[submodule "catkin_ws/src/agros_paths"]
+	path = catkin_ws/src/agros_paths
+	url = git@github.com:MrCerealKiller/agros_paths.git

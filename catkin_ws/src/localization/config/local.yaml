@@ -1,4 +1,4 @@
-frequency: 10
+frequency: 100
 two_d_mode: false
 
 map_frame: map
@@ -9,7 +9,7 @@ world_frame: map
 # transform_time_offset: 0.1
 
 smooth_lagged_data: true
-dynamic_process_noise_covariance: false
+dynamic_process_noise_covariance: true
 
 odom0: /visual_odometry/velocity
 odom0_config: [false, false, false,
@@ -27,5 +27,5 @@ imu0_config: [false, false, false,
               true, true, true,
               true, false, false]
 
-imu0_differential: false
+imu0_differential: true
 imu0_relative: false

@@ -3,7 +3,7 @@ odom_frame_id: "odom"
 ground_truth_frame_id: ""
 ground_truth_base_frame_id: ""
 wait_for_transform_duration: 0.3
-approx_sync: false
+approx_sync: true
 queue_size: 10
 subscribe_rgbd: false
 guess_frame_id: ""

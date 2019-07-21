@@ -12,23 +12,22 @@
     	  name="rgbd_odometry"
     	  args="$(arg args)"
       	  output="screen">
-      
+
       	<!-- Remapping required topics -->
       	<remap from="rgb/image"       to="$(arg rgb_topic)" />
       	<remap from="depth/image"     to="$(arg depth_topic)" />
       	<remap from="rgb/camera_info" to="$(arg camera_info_topic)" />
-  
+
       	<!-- Base configuration -->
         <rosparam command="load" file="$(find agros_base)/config/odom.yaml" />
-  		
-  		<!-- Advanced Configuration -->
 
+  		<!-- Advanced Configuration -->
   		<!-- This causes odometry to reset after one frame of being lost -->
 	  	<param name="Odom/ResetCountdown" value="5" />
 	  	<!-- Strategies: 0 = Frame to Map; 1 = Frame to Frame -->
 	  	<!-- <param name="Odom/Stratregy" value="1" /> -->
 	  	<!-- maximum features map size, default 2000 -->
-		<!-- param name="OdomF2M/MaxSize" type="string" value="1000" /--> 
+		<!-- param name="OdomF2M/MaxSize" type="string" value="1000" /-->
 		<!-- maximum features extracted by image, default 1000 -->
 		<!--param name="Vis/MaxFeatures" type="string" value="600" /-->
     </node>
