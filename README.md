@@ -12,6 +12,7 @@ This project acts as a demonstration of the following packages:
 * [AgROS GUI](https://github.com/MrCerealKiller/agros_gui)
 * [ROS ZED-F9P Driver](https://github.com/MrCerealKiller/ros_f9p_driver)
 * [AgROS Paths](htts://github.com/MrCerealKiller/agros_paths)
+* [AgROS IO](https://github.com/MrCerealKiller/agros_io)
 * [ROS 3-Space Driver](https://github.com/MrCerealKiller/ros_y3space_driver)
 
 ## Roadmap
