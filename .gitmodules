@@ -20,3 +20,6 @@
 [submodule "catkin_ws/src/agros_paths"]
 	path = catkin_ws/src/agros_paths
 	url = git@github.com:MrCerealKiller/agros_paths.git
+[submodule "catkin_ws/src/agros_io"]
+	path = catkin_ws/src/agros_io
+	url = git@github.com:MrCerealKiller/agros_io.git
